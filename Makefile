@@ -1,13 +1,15 @@
+IMAGE=packettracer
+
 all:
-	@echo "build:  ..."
-	@echo "run:    ..."
-        @echo "shell:  ..."
+	@echo "make build:  creates a docker image (${IMAGE})"
+	@echo "make run:    starts packettracer"
+	@echo "make shell:  opens a shell in the container"
 
 build:
-	docker build -t packettracer .
+	docker build -t ${IMAGE} .
 
 run:
-	docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix packettracer
+	docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix ${IMAGE}
 
 shell:
-	docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix packettracer /bin/bash
+	docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix ${IMAGE} /bin/bash
