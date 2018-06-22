@@ -1,5 +1,5 @@
-# docker-pt
-------
+# Packet tracer in a container
+
 ### Description
 -------
 docker-pt is a container for cisco's packet tracer program. Packet tracer is automatically installed in a container and can be conveniently used from there.
