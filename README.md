@@ -14,8 +14,13 @@ git clone https://github.com:frzifus/docker-pt.git
 
 **2. Navigate to the repo**
 ```bash
-make build:   creates a docker image (packettracer)
-make run:     starts packettracer
-make shell:   opens a shell in the container
+make build   # creates a docker image (packettracer)
+make run     # starts packettracer
+make shell   # opens a shell in the container
+make clean   # removes packettracer image
 
 ```
+
+### TODO
+-------
+- Build a flatpak
