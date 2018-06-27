@@ -26,7 +26,7 @@ If you receive an error like
 ```
 QXcbConnection: Could not connect to display
 ```
-your docker daemon isn't authorized to use your local xServer Session. Fix:
+your docker daemon isn't authorized to use your local XServer session. Fix:
 ```
 xhost +local:docker
 ```
