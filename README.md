@@ -21,6 +21,17 @@ make clean   # removes packettracer image
 
 ```
 
+### Troubleshooting
+-------
+If you receive an error like
+```
+QXcbConnection: Could not connect to display
+```
+your docker daemon isn't authorized to use your local xServer Session. Fix:
+```
+xhost +local:docker
+```
+
 ### TODO
 -------
 - Build a flatpak

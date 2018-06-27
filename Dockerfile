@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER frzifus benne@klimlive.de
 
-RUN apt-get update && apt-get install -y tar wget
+RUN apt-get update && apt-get install -y tar wget xauth libqt5webkit5 libqt5xml5 libqt5multimedia5 libqt5script5 libqt5scripttools5
 
 RUN export uid=1000 gid=1000 \
   && mkdir -p /home/pt \
@@ -19,4 +19,4 @@ RUN export uid=1000 gid=1000 \
 
 USER pt
 ENV HOME /home/pt
-CMD /opt/pt/packettracer
+CMD /home/pt/bin/PacketTracer7
