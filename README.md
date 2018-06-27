@@ -22,7 +22,6 @@ make clean   # removes packettracer image
 ```
 
 ### Troubleshooting
--------
 If you receive an error like
 ```
 QXcbConnection: Could not connect to display
