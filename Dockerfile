@@ -24,6 +24,9 @@ RUN export uid=1000 gid=1000 \
   && rm -f /tmp/PacketTracer_730_amd64.deb.sha256 \
   && chown ${uid}:${gid} -Rv /opt/pt
 
+COPY packettracer /usr/local/bin/packettracer
+RUN chmod +x /usr/local/bin/packettracer
+
 USER pt
 ENV HOME /home/pt
 CMD /usr/local/bin/packettracer
